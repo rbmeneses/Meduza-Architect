@@ -1,5 +1,7 @@
 # 🐙 Meduza Architect Pro
 
+![Visão Geral](Screenshot_9.png)
+
 **Gerador de Diagramas Inteligente com IA (Gemini) e Streamlit**
 
 O **Meduza Architect Pro** é uma ferramenta open-source desenvolvida para arquitetos de software, desenvolvedores e gestores de produto. Ela elimina a necessidade de arrastar caixinhas manualmente, permitindo criar fluxogramas, mapas mentais e diagramas de sequência complexos usando apenas **texto natural** e o poder do **Google Gemini AI** renderizados via **Mermaid.js**.
