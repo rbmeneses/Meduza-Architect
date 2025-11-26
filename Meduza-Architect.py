@@ -315,7 +315,7 @@ else:
     col_edit, col_view = st.columns([1, 1.4])
     
     with col_edit:
-        st.caption("Editor de Código")
+        st.caption("Editor de Código, para aplicar o codigo na janela precione Ctrl e Enter")
         txt = st.text_area("Code", st.session_state["mermaid_code"], height=600, label_visibility="collapsed")
         if txt != st.session_state["mermaid_code"]:
             st.session_state["mermaid_code"] = txt
@@ -344,4 +344,5 @@ else:
         <script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
         mermaid.initialize({{ startOnLoad: true }});</script></body></html>"""
         
+
     st.download_button("🌍 Baixar Versão HTML (Offline)", get_html_download(st.session_state["mermaid_code"]), "fluxo.html", "text/html")
