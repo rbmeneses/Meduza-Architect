@@ -1,4 +1,5 @@
 # 🐙 Meduza Architect Pro
+"https://meduza-architect.streamlit.app/"
 
 ![Visão Geral](Screenshot_9.png)
 
