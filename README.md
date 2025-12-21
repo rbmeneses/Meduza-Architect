@@ -74,5 +74,3 @@ Contribuições são bem-vindas! Sinta-se à vontade para abrir uma Issue ou env
 Distribuído sob a licença MIT. Veja LICENSE para mais informações.
 
 Desenvolvido para arquitetos de soluções e entusiastas de automação IA.
-
-Gostaria que eu gerasse também o arquivo requirements.txt ou uma seção específica sobre como configurar as chaves de API do Google Cloud?
