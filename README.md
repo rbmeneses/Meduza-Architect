@@ -1,9 +1,9 @@
 "https://meduza-architect.streamlit.app/"
 
 ![Visão Geral](Screenshot_9.png)
-![Visão Geral](Screenshot_9.png)
-![Visão Geral](Screenshot_9.png)
-![Visão Geral](Screenshot_9.png)
+![Visão Geral](Screenshot_16.png)
+![Visão Geral](1766093357638.jfif)
+![Visão Geral](1766093357705.jfif)
 
 🐙 Meduza Architect Pro
 Meduza Architect é uma ferramenta de engenharia de prompts e arquitetura de sistemas que transforma descrições em linguagem natural em diagramas Mermaid.js e fluxos de automação prontos para o n8n. Utilizando o poder do Google Gemini 2.5 Pro, ele permite desenhar, visualizar e exportar workflows complexos de IA em segundos.
