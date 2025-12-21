@@ -35,7 +35,7 @@ Banco de Dados: SQLite3
 🛠️ Como Instalar e Rodar
 Clone o repositório:
 
-git clone https://github.com/seu-usuario/meduza-architect.git
+git clone https://github.com/rbmeneses/Meduza-Architect.git
 cd meduza-architect
 Instale as dependências:
 
