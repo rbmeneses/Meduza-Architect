@@ -67,14 +67,6 @@ Bloco 2: Análise de Intenção com LLM.
 
 Bloco 3: Fluxo de Carrinho e Finalização de Pedido.
 
-🤝 Contribuições
-Contribuições são bem-vindas! Sinta-se à vontade para abrir uma Issue ou enviar um Pull Request.
-
-📜 Licença
-Distribuído sob a licença MIT. Veja LICENSE para mais informações.
-
-Desenvolvido para arquitetos de soluções e entusiastas de automação IA.
-
 1. Arquivo requirements.txt
 Crie um arquivo chamado requirements.txt na raiz do projeto com o seguinte conteúdo:
 
@@ -148,3 +140,11 @@ meduza_diagrams.db: Banco de dados SQLite criado automaticamente na primeira exe
 requirements.txt: Dependências do projeto.
 
 README.md: Documentação completa.
+
+🤝 Contribuições
+Contribuições são bem-vindas! Sinta-se à vontade para abrir uma Issue ou enviar um Pull Request.
+
+📜 Licença
+Distribuído sob a licença MIT. Veja LICENSE para mais informações.
+
+Desenvolvido para arquitetos de soluções e entusiastas de automação IA.
