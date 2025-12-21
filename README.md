@@ -35,18 +35,12 @@ Banco de Dados: SQLite3
 🛠️ Como Instalar e Rodar
 Clone o repositório:
 
-Bash
-
 git clone https://github.com/seu-usuario/meduza-architect.git
 cd meduza-architect
 Instale as dependências:
 
-Bash
-
 pip install streamlit streamlit-mermaid google-generativeai
 Execute a aplicação:
-
-Bash
 
 streamlit run fluxocognos.py
 Configuração:
