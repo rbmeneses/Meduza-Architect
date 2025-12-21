@@ -1,82 +1,84 @@
-# 🐙 Meduza Architect Pro
 "https://meduza-architect.streamlit.app/"
 
 ![Visão Geral](Screenshot_9.png)
+![Visão Geral](Screenshot_9.png)
+![Visão Geral](Screenshot_9.png)
+![Visão Geral](Screenshot_9.png)
 
-**Gerador de Diagramas Inteligente com IA (Gemini) e Streamlit**
+🐙 Meduza Architect Pro
+Meduza Architect é uma ferramenta de engenharia de prompts e arquitetura de sistemas que transforma descrições em linguagem natural em diagramas Mermaid.js e fluxos de automação prontos para o n8n. Utilizando o poder do Google Gemini 2.5 Pro, ele permite desenhar, visualizar e exportar workflows complexos de IA em segundos.
 
-O **Meduza Architect Pro** é uma ferramenta open-source desenvolvida para arquitetos de software, desenvolvedores e gestores de produto. Ela elimina a necessidade de arrastar caixinhas manualmente, permitindo criar fluxogramas, mapas mentais e diagramas de sequência complexos usando apenas **texto natural** e o poder do **Google Gemini AI** renderizados via **Mermaid.js**.
+✨ Funcionalidades Principais
+IA Generativa de Diagramas: Descreva a lógica do seu sistema e veja o código Mermaid.js ser gerado e renderizado instantaneamente.
 
-![Visão Geral](Screenshot_7.png)
+Estilo n8n Nativo: Opção para estilizar diagramas com a identidade visual do n8n (nós, cores e formas específicas).
 
-## ✨ Funcionalidades
+Exportação Direta para n8n: Gera automaticamente o arquivo .json compatível com a versão v2.0.3+ do n8n, pronto para importar e rodar.
 
-* **🤖 Text-to-Diagram:** Descreva seu fluxo (ex: "Sistema de triagem de e-mails com n8n e BigQuery") e a IA gera o código Mermaid instantaneamente.
-* **🛠️ Editor & Preview Real-Time:** Edite o código gerado manualmente e veja as alterações em tempo real.
-* **💾 Banco de Dados Local:** Salve seus diagramas favoritos em um banco SQLite integrado para acessar depois.
-* **📂 Importação/Exportação:**
-    * Importe arquivos `.mmd` ou `.txt`.
-    * Exporte para **HTML Offline** interativo.
-* **🎨 UI Otimizada:** Interface Dark Mode focada em produtividade com modo "Tela Cheia".
-* **🔄 Auto-Correção:** Se o código gerado quebrar, um clique pede para a IA corrigir a sintaxe.
+Guia de Workflow Automático: Além do código, a IA gera um tutorial detalhado (Markdown) explicando cada bloco lógico do fluxo criado.
 
-## 📸 Screenshots
+Banco de Dados Local: Salve e gerencie seus rascunhos de arquitetura diretamente na interface via SQLite.
 
-### Editor Poderoso e Visualização
-A interface divide a tela entre o editor de código e o diagrama renderizado.
-![Editor](Screenshot_2.png)
+Interface Multi-Modal: Suporte para fluxos que envolvem texto, imagem (Vision) e áudio (Whisper).
 
-### Exemplo de Fluxo Complexo (Automação WhatsApp)
-Criação de fluxos de decisão complexos com múltiplos nós e integrações.
-![Fluxo WhatsApp](Screenshot_3.png)
+🚀 Tecnologias Utilizadas
+Linguagem: Python 3.10+
 
-### Mapas Mentais
-Ideal para brainstorming de projetos e MVPs.
-![Mapa Mental](Screenshot_4.png)
+Framework Web: Streamlit
 
-## 🚀 Instalação e Uso
+Modelo de IA: Google Gemini 2.5 Pro
 
-### Pré-requisitos
-* Python 3.9+
-* Uma API Key do Google Gemini (Google AI Studio)
+Renderização: Mermaid.js (via streamlit_mermaid)
 
-### Passos
+Banco de Dados: SQLite3
 
-1.  **Clone o repositório**
-    ```bash
-    git clone [https://github.com/seu-usuario/meduza-architect.git](https://github.com/seu-usuario/meduza-architect.git)
-    cd meduza-architect
-    ```
+🛠️ Como Instalar e Rodar
+Clone o repositório:
 
-2.  **Crie um ambiente virtual**
-    ```bash
-    python -m venv .venv
-    source .venv/bin/activate  # No Windows: .venv\Scripts\activate
-    ```
+Bash
 
-3.  **Instale as dependências**
-    ```bash
-    pip install streamlit streamlit-mermaid google-generativeai
-    ```
+git clone https://github.com/seu-usuario/meduza-architect.git
+cd meduza-architect
+Instale as dependências:
 
-4.  **Execute a aplicação**
-    ```bash
-    streamlit run fluxocognos.py
-    ```
+Bash
 
-5.  **Acesse no navegador**
-    O app abrirá automaticamente em `http://localhost:8501`. Insira sua API Key na barra lateral e comece a criar!
+pip install streamlit streamlit-mermaid google-generativeai
+Execute a aplicação:
 
-## 🛠️ Tecnologias Utilizadas
+Bash
 
-* [Streamlit](https://streamlit.io/) - Framework de UI
-* [Google Gemini](https://ai.google.dev/) - Motor de Inteligência Artificial
-* [Mermaid.js](https://mermaid.js.org/) - Renderização de Diagramas
-* [SQLite](https://www.sqlite.org/index.html) - Persistência de dados local
+streamlit run fluxocognos.py
+Configuração:
 
-## 📄 Licença
+Insira sua Gemini API Key na barra lateral.
 
-Este projeto está sob a licença MIT. Sinta-se livre para contribuir!
+Comece a descrever seu fluxo no campo "Comando IA" (ex: "Crie um fluxo de vendas para WhatsApp que verifica se o cliente existe no banco Postgres").
 
----
-Desenvolvido por **Ricardo Barbosa de Meneses**
+📸 Demonstração
+O Meduza Architect permite criar arquiteturas avançadas de Agentes Orquestradores, onde um agente central (Supervisor) delega tarefas para sub-agentes especialistas (Pesquisa, Produtividade, etc).
+
+📄 Exemplo de Fluxo Gerado
+Ao utilizar o comando de exportação, o sistema gera:
+
+Diagrama Visual: Representação gráfica no editor.
+
+Workflow JSON: Código pronto para o n8n.
+
+Documentação:
+
+Bloco 1: Verificação de Cliente (Postgres/Supabase).
+
+Bloco 2: Análise de Intenção com LLM.
+
+Bloco 3: Fluxo de Carrinho e Finalização de Pedido.
+
+🤝 Contribuições
+Contribuições são bem-vindas! Sinta-se à vontade para abrir uma Issue ou enviar um Pull Request.
+
+📜 Licença
+Distribuído sob a licença MIT. Veja LICENSE para mais informações.
+
+Desenvolvido para arquitetos de soluções e entusiastas de automação IA.
+
+Gostaria que eu gerasse também o arquivo requirements.txt ou uma seção específica sobre como configurar as chaves de API do Google Cloud?
