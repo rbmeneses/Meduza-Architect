@@ -5,146 +5,108 @@
 ![Visão Geral](1766093357638.jfif)
 ![Visão Geral](1766093357705.jfif)
 
-🐙 Meduza Architect Pro
-Meduza Architect é uma ferramenta de engenharia de prompts e arquitetura de sistemas que transforma descrições em linguagem natural em diagramas Mermaid.js e fluxos de automação prontos para o n8n. Utilizando o poder do Google Gemini 2.5 Pro, ele permite desenhar, visualizar e exportar workflows complexos de IA em segundos.
+Markdown
+# 🐙 Meduza Architect Pro
 
-✨ Funcionalidades Principais
-IA Generativa de Diagramas: Descreva a lógica do seu sistema e veja o código Mermaid.js ser gerado e renderizado instantaneamente.
+![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?logo=streamlit&logoColor=white)
+![Google Gemini](https://img.shields.io/badge/Google_Gemini-2.5_Pro-8E75B2?logo=google&logoColor=white)
+![n8n](https://img.shields.io/badge/n8n-Compatible-FF6D5A?logo=n8n&logoColor=white)
 
-Estilo n8n Nativo: Opção para estilizar diagramas com a identidade visual do n8n (nós, cores e formas específicas).
+O **Meduza Architect Pro** é uma ferramenta avançada de engenharia de prompts e arquitetura de sistemas que transforma descrições em linguagem natural em diagramas [Mermaid.js](https://mermaid.js.org/) e fluxos de automação prontos para o [n8n](https://n8n.io/). 
 
-Exportação Direta para n8n: Gera automaticamente o arquivo .json compatível com a versão v2.0.3+ do n8n, pronto para importar e rodar.
+Utilizando o poder do **Google Gemini 2.5 Pro**, o Meduza permite desenhar, visualizar e exportar workflows complexos de IA e orquestração de agentes em poucos segundos.
 
-Guia de Workflow Automático: Além do código, a IA gera um tutorial detalhado (Markdown) explicando cada bloco lógico do fluxo criado.
+---
 
-Banco de Dados Local: Salve e gerencie seus rascunhos de arquitetura diretamente na interface via SQLite.
+## ✨ Funcionalidades Principais
 
-Interface Multi-Modal: Suporte para fluxos que envolvem texto, imagem (Vision) e áudio (Whisper).
+* **IA Generativa de Diagramas:** Descreva a lógica do seu sistema e veja o código Mermaid.js ser gerado e renderizado instantaneamente na interface.
+* **Estilo n8n Nativo:** Opção para estilizar os diagramas com a identidade visual do n8n (nomenclatura, cores e formas específicas de nós).
+* **Exportação Direta para n8n:** Gera automaticamente o arquivo `.json` (compatível com n8n v2.0.3+), pronto para importação direta.
+* **Guia de Workflow Automático:** A IA gera um tutorial detalhado em Markdown explicando cada bloco lógico do fluxo arquitetado.
+* **Banco de Dados Local:** Salve, recupere e gerencie seus rascunhos de arquitetura diretamente na interface via SQLite.
+* **Suporte Multi-Modal:** Estruture fluxos que envolvem texto, visão computacional (Vision) e áudio (Whisper/Speech-to-Text).
 
-🚀 Tecnologias Utilizadas
-Linguagem: Python 3.10+
+---
 
-Framework Web: Streamlit
+## 🚀 Arquitetura e Tecnologias
 
-Modelo de IA: Google Gemini 2.5 Pro
+O Meduza Architect foi projetado para atuar como o "cérebro" do desenho da sua automação, sendo altamente escalável para múltiplos sub-agentes especialistas (Pesquisa, Produtividade, RAG).
 
-Renderização: Mermaid.js (via streamlit_mermaid)
+* **Linguagem:** Python 3.10+
+* **Interface / Framework Web:** Streamlit
+* **Motor de IA (Orquestrador):** Google Gemini 2.5 Pro
+* **Motor de Renderização:** Mermaid.js (via `streamlit-mermaid`)
+* **Persistência de Dados:** SQLite3
+* **Infraestrutura Cloud (Opcional):** Pronto para integração com **Google Cloud & Vertex AI**, permitindo maior segurança empresarial e controle regional de dados.
 
-Banco de Dados: SQLite3
+---
 
-🛠️ Como Instalar e Rodar
-Clone o repositório:
+## 🛠️ Instalação e Execução
 
-git clone https://github.com/rbmeneses/Meduza-Architect.git
+### Pré-requisitos
+Certifique-se de ter o Python 3.10 ou superior instalado em sua máquina.
+
+### 1. Clonar o repositório
+
+git clone [https://github.com/rbmeneses/Meduza-Architect.git](https://github.com/rbmeneses/Meduza-Architect.git)
 cd meduza-architect
-Instale as dependências:
+2. Instalar as dependências
+Recomenda-se o uso de um ambiente virtual (venv). Execute:
 
-pip install streamlit streamlit-mermaid google-generativeai
-Execute a aplicação:
+Bash
+pip install -r requirements.txt
+3. Configurar a Chave de API
+Para o sistema funcionar, é necessária uma API Key do Google AI Studio:
 
+Acesse o Google AI Studio.
+
+Clique em "Get API Key" e gere uma nova chave.
+
+Você irá inserir essa chave na barra lateral da aplicação após iniciá-la.
+
+4. Rodar a aplicação
+Bash
 streamlit run fluxocognos.py
-Configuração:
+📖 Como Usar
+Configuração Inicial: Ao abrir a interface, insira sua Gemini API Key na barra lateral esquerda.
 
-Insira sua Gemini API Key na barra lateral.
+Gerar Diagrama: No campo Comando IA, descreva seu fluxo.
 
-Comece a descrever seu fluxo no campo "Comando IA" (ex: "Crie um fluxo de vendas para WhatsApp que verifica se o cliente existe no banco Postgres").
+Exemplo: `"Crie um sistema de triagem de vendas para WhatsApp que verifica se o cliente existe no banco Postgres e passa por um agente LLM para análise de intenção."*
 
-📸 Demonstração
-O Meduza Architect permite criar arquiteturas avançadas de Agentes Orquestradores, onde um agente central (Supervisor) delega tarefas para sub-agentes especialistas (Pesquisa, Produtividade, etc).
+Estilo: Ative o checkbox Estilo n8n se desejar que a IA utilize a identidade visual padrão da ferramenta.
 
-📄 Exemplo de Fluxo Gerado
-Ao utilizar o comando de exportação, o sistema gera:
+Executar: Clique em Gerar Alteração.
 
-Diagrama Visual: Representação gráfica no editor.
+Exportar: Após a renderização visual, clique em Gerar Exportação para n8n v2.0.3. O sistema fornecerá o JSON do workflow e a documentação dos blocos lógicos.
 
-Workflow JSON: Código pronto para o n8n.
+📥 Importando para o n8n
+Após gerar e baixar o seu arquivo workflow.json através do Meduza:
 
-Documentação:
+Abra sua instância do n8n.
 
-Bloco 1: Verificação de Cliente (Postgres/Supabase).
+Crie um novo workflow ou abra um painel em branco.
 
-Bloco 2: Análise de Intenção com LLM.
+Clique no menu de três pontos (...) no canto superior direito da tela.
 
-Bloco 3: Fluxo de Carrinho e Finalização de Pedido.
+Selecione Import from File e escolha o arquivo .json gerado.
 
-1. Arquivo requirements.txt
-Crie um arquivo chamado requirements.txt na raiz do projeto com o seguinte conteúdo:
+Aviso de Credenciais: O n8n importará perfeitamente a estrutura e a lógica dos nós. No entanto, por questões de segurança, você precisará configurar suas credenciais (WhatsApp, Postgres, APIs do Google, etc.) manualmente dentro de cada nó.
 
+📂 Estrutura do Projeto
 Plaintext
+meduza-architect/
+├── fluxocognos.py       # Código fonte principal da aplicação (Streamlit)
+├── requirements.txt     # Dependências do projeto (Python)
+├── README.md            # Documentação do projeto
+└── meduza_diagrams.db   # Banco de dados SQLite (Gerado automaticamente na 1ª execução)
+
+### Dica extra de organização no repositório:
+Certifique-se de que o seu arquivo `requirements.txt` contenha exatamente isto e esteja na raiz do projeto (como referenciado na estrutura acima):
+
 
 streamlit
 streamlit-mermaid
 google-generativeai
-2. Seção de Configuração de API (para adicionar ao README)
-Adicione este bloco ao seu README.md para orientar os usuários sobre como obter a chave necessária para o funcionamento da IA:
-
-🔑 Configuração da API Google Gemini
-Para que o Meduza Architect funcione, você precisa de uma chave de API do Google AI Studio.
-
-Acesse o Google AI Studio.
-
-Clique em "Get API Key".
-
-Crie uma nova chave em um projeto novo ou existente.
-
-No Meduza Architect, insira essa chave no campo Gemini API Key localizado na barra lateral esquerda.
-
-Nota: O sistema utiliza o modelo gemini-2.5-pro para gerar a lógica dos diagramas e a conversão para o formato n8n.
-
-3. Guia de Uso Rápido (Snippet para o README)
-Gerar Diagrama: Digite um comando como "Sistema de triagem de vendas com resposta automática" no campo Comando IA e clique em Gerar Alteração.
-
-Estilo n8n: Ative o checkbox Estilo n8n para que a IA utilize a nomenclatura e cores padrões de nós do n8n no diagrama Mermaid.
-
-Exportar: Após finalizar o desenho, clique em Gerar Exportação para n8n v2.0.3 para obter o JSON de importação e o guia descritivo do workflow.
-
-📥 Como Importar para o n8n
-Após gerar e baixar o arquivo workflow.json no Meduza Architect, siga estes passos para colocá-lo em execução:
-
-Abra a sua instância do n8n.
-
-Crie um novo workflow ou abra um existente.
-
-Clique no menu de três pontos (...) no canto superior direito da tela.
-
-Selecione a opção "Import from File" (Importar de Arquivo).
-
-Selecione o arquivo workflow.json baixado.
-
-Configuração de Credenciais: Note que o n8n importará a estrutura dos nós, mas você precisará configurar as suas credenciais (WhatsApp, Google, Postgres, etc.) manualmente em cada nó para que o fluxo funcione.
-
-☁️ Infraestrutura Google Cloud & Vertex AI
-O Meduza Architect foi projetado para ser o "cérebro" da sua automação, utilizando a infraestrutura de ponta do Google Cloud.
-
-Principais Componentes Utilizados:
-Google Gemini 2.5 Pro: Atua como o orquestrador central, analisando intenções, gerando lógica de código Mermaid e estruturando o JSON do n8n.
-
-Vertex AI (Opcional/Configurável): O código está preparado para escalar para modelos hospedados no Vertex AI, permitindo maior controle sobre a região dos dados e segurança empresarial.
-
-Gemini Vision: Utilizado nos fluxos de mídia para processar e normalizar entradas de imagem enviadas via WhatsApp antes de passá-las para a lógica de decisão.
-
-Vantagens desta Arquitetura:
-Escalabilidade: Capaz de lidar com múltiplos sub-agentes especialistas (Pesquisa, Produtividade, RAG) simultaneamente.
-
-Processamento Multimodal: Suporte nativo para Texto, Imagem e Áudio (via Whisper/Google Speech-to-Text) dentro do mesmo workflow.
-
-Baixa Latência: Respostas rápidas para interações de chat em tempo real no WhatsApp.
-
-📂 Estrutura de Arquivos Sugerida
-Para manter seu GitHub organizado:
-
-fluxocognos.py: Código fonte principal (Streamlit).
-
-meduza_diagrams.db: Banco de dados SQLite criado automaticamente na primeira execução.
-
-requirements.txt: Dependências do projeto.
-
-README.md: Documentação completa.
-
-🤝 Contribuições
-Contribuições são bem-vindas! Sinta-se à vontade para abrir uma Issue ou enviar um Pull Request.
-
-📜 Licença
-Distribuído sob a licença MIT. Veja LICENSE para mais informações.
-
-Desenvolvido para arquitetos de soluções e entusiastas de automação IA.
